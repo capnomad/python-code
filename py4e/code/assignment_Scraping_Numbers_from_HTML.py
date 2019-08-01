@@ -11,8 +11,9 @@ ctx.verify_mode = ssl.CERT_NONE
 
 
 #url = "http://py4e-data.dr-chuck.net/comments_42.html"
-#url = "http://py4e-data.dr-chuck.net/comments_227442.html"
-url = input("Enter - ")
+url = "http://py4e-data.dr-chuck.net/comments_227442.html"
+#url = input("Enter - ")
+
 html = urllib.request.urlopen(url, context=ctx).read()
 soup = BeautifulSoup(html, 'html.parser')
 
@@ -24,7 +25,4 @@ for tag in tags:
     count += 1
 print("Count", count)
 print("Sum", sum)
-
-
-
 
