@@ -6,7 +6,7 @@
 import teradata
 import pandas as pd
 
-host,username,password, driver = 'ecdwd.it.att.com','DV6CRMLOAD', 'U32_S33mvex35', 'Teradata Database ODBC Driver 16.20'
+host,username,password, driver = 'db_server','username', 'password', 'Teradata Database ODBC Driver 16.20'
 
 
 #Make a connection
@@ -18,7 +18,7 @@ session = udaExec.connect(method="odbc", system=host,
 
 
 #Query
-query1 = "SEL DATABASENAME, TABLENAME FROM DBC.TABLES WHERE DATABASENAME = 'DV6CRMDB';"
+query1 = "SEL DATABASENAME, TABLENAME FROM DBC.TABLES WHERE DATABASENAME = 'dbname';"
 
 lst_tables = list()
 
